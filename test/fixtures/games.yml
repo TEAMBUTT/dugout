@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2018-05-19 16:15:19
+  other_team: The Bad Guys
+  location: Ebbets Field
+  location_map_url: https://goo.gl/maps/hzth4F7ULP22
+
+two:
+  start_time: 2018-05-26 16:15:19
+  other_team: The Yankees
+  location: Yankee Stadium
+  location_map_url: https://goo.gl/maps/jCEAhFNeusv
