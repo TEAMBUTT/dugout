@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+names =  %w[adam jared john]
+names += (1..10).map{ |i| "player#{i}" }
+
+names.each do |name|
+  Player.create!(name: name, email: "#{name}@example.com")
+end
+
+
