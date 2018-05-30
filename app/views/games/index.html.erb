@@ -8,7 +8,6 @@
       <th>Start time</th>
       <th>Other team</th>
       <th>Location</th>
-      <th>Location map url</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,8 +17,15 @@
       <tr>
         <td><%= game.start_time %></td>
         <td><%= game.other_team %></td>
-        <td><%= game.location %></td>
-        <td><%= game.location_map_url %></td>
+        <td>
+          <% if game.location_map_url? %>
+            <%= link_to game.location_map_url do %>
+              <%= game.location %>
+            <% end %>
+          <% else %>
+            <%= game.location %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
