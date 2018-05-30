@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  game_player_mailer:
+    invite:
+      subject: "vs. %{other_team} on %{date}"

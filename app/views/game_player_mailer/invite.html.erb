@@ -1,0 +1,46 @@
+<center>
+<p>
+  <%= @player.name %>, your team 
+</p>
+
+<h2>The Errors</h2>
+
+<p>
+  needs your help on
+</p>
+
+<h2>
+  <%= @game.start_time.strftime("%A %B %-d at %I:%M %p")  %>
+</h2>
+
+<p>
+  to defeat
+</p>
+
+<h2>
+  <%= @game.other_team %>
+</h2>
+
+<table style="width: 100%; max-width: 500px;">
+  <tr>
+    <td>
+      <a
+        href="#"
+        style="display: block; text-align: center; text-decoration: none; padding: 2em; background-color: green; color: white;"
+        >
+        Count me in
+      </a>
+    </td>
+    <td>
+      <a
+        href="#"
+        style="display: block; text-align: center; text-decoration: none; padding: 2em; background-color: red; color: white;"
+        >
+        I can't make it
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+</center>
