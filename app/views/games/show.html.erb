@@ -1,24 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Start time:</strong>
-  <%= @game.start_time %>
-</p>
-
-<p>
-  <strong>Other team:</strong>
-  <%= @game.other_team %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @game.location %>
-</p>
-
-<p>
-  <strong>Location map url:</strong>
-  <%= @game.location_map_url %>
-</p>
+<%= render @game %>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>

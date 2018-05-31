@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  before_action :set_player, only: [:rsvp]
   before_action :set_game, only: [:show, :edit, :update, :destroy]
 
   # GET /games

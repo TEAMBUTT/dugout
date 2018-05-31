@@ -9,6 +9,8 @@ class GamePlayerMailer < ApplicationMailer
       date: @game.start_time.strftime("%A %B %-d at %I:%M %p")
     )
 
+    @rsvp_url = game_rsvp_url(@game, token: @player.to_sgid(for: 'rsvp'))
+
     mail to: @player.email, subject: subject
   end
 end

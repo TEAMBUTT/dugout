@@ -1,0 +1,16 @@
+<h1>Game</h1>
+
+<%= render @game %>
+
+<h1>Attendance</h1>
+<dl>
+<% @game.team_rsvps.each do |rsvp| %>
+  <dt>
+    <%= rsvp.player.name %>
+    <%= "(you)" if rsvp.player == @player %>
+  </dt>
+  <dd>
+    <%= rsvp.status_string %>
+  </dd>
+<% end %>
+</dl>

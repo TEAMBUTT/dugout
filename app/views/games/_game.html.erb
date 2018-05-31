@@ -1,0 +1,18 @@
+<p>
+  <strong>Start time:</strong>
+  <%= @game.start_time %>
+</p>
+
+<p>
+  <strong>Other team:</strong>
+  <%= @game.other_team %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <% if @game.location_map_url %>
+    <%= link_to @game.location, @game.location_map_url %>
+  <% else %>
+    <%= @game.location %>
+  <% end %>
+</p>
